@@ -1,0 +1,120 @@
+/* Reset dan Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animasi Global */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header & Nav */
+header {
+    background: #2c3e50;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Sections */
+section {
+    display: none;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section (Home) */
+#home {
+    text-align: center;
+    background: #ecf0f1;
+}
+.profile-container {
+    margin-bottom: 2rem;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+.tagline {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.video-item {
+    flex: 1 1 300px;
+    text-align: center;
+}
+video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .video-container {
+        flex-direction: column;
+    }
+}
